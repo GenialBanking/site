@@ -1,0 +1,27 @@
+.animation-enter-side {
+    animation: enter-side .5s forwards;
+}
+
+@keyframes enter-side {
+    0% {
+        transform: translateX(100%);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
+
+.animation-out-side {
+    animation: out-side .5s forwards;
+}
+
+@keyframes out-side {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(100%);
+    }
+}

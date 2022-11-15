@@ -1,0 +1,18 @@
+<header class="header-background">
+    <div class="header-logo">
+        <span>GENIAL</span>
+        <h4>BANKING</h4>
+    </div>
+    <ul class="header-navbar" [ngClass]="{'display-flex animation-enter-side' : isActive}">
+        <li (click)="toggleSidebar()">Cadastre-se</li>
+        <li (click)="toggleSidebar()">Login</li>
+    </ul>
+    <button class="hamburger hamburger--slider " 
+        [ngClass]="{'is-active' : isActive}" 
+        type="button"
+        (click)="toggleSidebar()">
+        <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+        </span>
+    </button>
+</header>
