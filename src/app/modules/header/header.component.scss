@@ -14,6 +14,8 @@ $hamburger-hover-opacity: 0.9;
         display: flex;
         justify-content: space-between;
         align-items: center;
+        position: sticky;
+        top: 0;
 
         background-color: var(--background-color);
 
@@ -36,12 +38,18 @@ $hamburger-hover-opacity: 0.9;
         font-size: 20px;
 
         color: var(--background3-color);
+
+        li {
+            cursor: pointer;
+        }
     }
 
     &-logo {
         display: flex;
         flex-direction: column;
         align-items: center;
+        
+        cursor: pointer;
 
         span {
             font-size: 28px;

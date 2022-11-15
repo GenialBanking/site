@@ -25,3 +25,18 @@
         transform: translateX(100%);
     }
 }
+
+.animation-enter-bottom {
+    animation: enter-side .5s forwards;
+}
+
+@keyframes enter-bottom {
+    0% {
+        transform: translateY(35%);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
