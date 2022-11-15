@@ -23,14 +23,13 @@ $hamburger-hover-opacity: 0.9;
 
         border-bottom: 1px solid var(--destak2-color);
 
-        button {        
+        button {
             display: none;
         }
     }
-    
+
     &-navbar {
         display: flex;
-        gap: 50px;
 
         text-decoration: none;
         list-style: none;
@@ -39,8 +38,47 @@ $hamburger-hover-opacity: 0.9;
 
         color: var(--background3-color);
 
+        .icon-menu::after {
+            content: '';
+            display: block;
+            background-color: var(--destak-color);
+            width: 0%;
+            height: 2px;
+            transition: .3s;
+        }
+
+        .icon-menu:hover::after {
+            width: 100%;
+            transition: .3s;
+        }
+
         li {
             cursor: pointer;
+            padding: 0px 20px;
+        }
+
+        &-button {
+            display: flex;
+            gap: 15px;
+
+            text-decoration: none;
+            list-style: none;
+
+            color: var(--background4-color);
+
+            li {
+                font-size: 14px;
+                padding: 8px 25px;
+                cursor: pointer;
+            }
+
+            .login {
+                background-color: var(--background2-color);
+            }
+
+            .login:hover {
+                background-color: var(--background2-hover-color);
+            }
         }
     }
 
@@ -48,7 +86,7 @@ $hamburger-hover-opacity: 0.9;
         display: flex;
         flex-direction: column;
         align-items: center;
-        
+
         cursor: pointer;
 
         span {
