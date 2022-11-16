@@ -3,15 +3,17 @@
         <span>GENIAL</span>
         <h4>BANKING</h4>
     </div>
-    <ul class="header-navbar">
-        <li class="icon-menu">Cartões</li>
-        <li class="icon-menu">Emprestimos</li>
-        <li class="icon-menu">Investimentos</li>
-    </ul>
-    <ul class="header-navbar-button" [ngClass]="{'display-flex animation-enter-side' : isActive}">
-        <li class="button">Abra sua Conta</li>
-        <li class="button login">Entrar</li>
-    </ul>
+    <div class="header-menu" [ngClass]="{'header-menu-active' : isActive}">
+        <ul class="header-navbar">
+            <li class="icon-menu">Cartões</li>
+            <li class="icon-menu">Emprestimos</li>
+            <li class="icon-menu">Investimentos</li>
+        </ul>
+        <ul class="header-navbar-button">
+            <li class="button">Abra sua Conta</li>
+            <li class="button login">Entrar</li>
+        </ul>
+    </div>
     <button class="hamburger hamburger--slider " 
         [ngClass]="{'is-active' : isActive}" 
         type="button"

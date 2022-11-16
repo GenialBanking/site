@@ -1,1 +1,13 @@
 @import '../styles.scss';
+
+app-header {
+    max-width: 100vw;
+
+    overflow: hidden;
+}
+
+router-outlet {
+    max-width: 100vw;
+
+    overflow: hidden;
+}

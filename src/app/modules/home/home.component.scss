@@ -1,79 +1,72 @@
 .section {
     min-height: calc(100vh - 70px);
-    background-color: var(--background-color);
     display: flex;
-    padding: 20px 80px;
+    padding: 20px var(--padding-container);
     align-items: center;
+    top: 70px;
+    background-image: url('../../../assets/images/background-banking.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
 
-    &-box {
-        &-image {
-            width: 50%;
-            max-height: calc(100vh - 110px);
-            display: flex;
-            align-items: center;
-            justify-content: flex-end;
+    &-box-describe {
+        max-height: calc(100vh - 110px);
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
 
-            img {
-                filter: drop-shadow(0px 0px 10px rgb(0, 0, 0));
-                max-height: calc(100vh - 110px);
-            }
+        h1 {
+            font-size: var(--font-title-size);
+            color: var(--background4-color);
+            padding-bottom: 10px;
+            opacity: 0;
+            animation: enter-bottom 1s forwards;
         }
 
-        &-describe {
-            max-height: calc(100vh - 110px);
-            width: 50%;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: flex-start;
-
-            h1 {
-                font-size: 40px;
-                color: var(--background4-color);
-                padding-bottom: 10px;
-                opacity: 0;
-                animation: enter-bottom 1s forwards;
-            }
-
-            p {
-                font-size: 26px;
-                color: var(--background3-color);
-                padding-bottom: 50px;
-                opacity: 0;
-                animation: enter-bottom 1s forwards .5s;
-            }
-
-            button {
-                opacity: 0;
-                animation: enter-bottom 1s forwards 1s;
-            }
+        p {
+            font-size: var(--font-sub-title-size);
+            color: var(--background3-color);
+            padding-bottom: 50px;
+            opacity: 0;
+            animation: enter-bottom 1s forwards .5s;
         }
-    }
-    &-image-home {
-        
-        width: 40%;
+
+        button {
+            opacity: 0;
+            animation: enter-bottom 1s forwards 1s;
+        }
     }
 }
 
-.box {
-    height: 40px;
-    width: 40px;
-    background-color: red;
-    transform: perspective(20px);
-    transform: skew(-37deg, 7deg);
-    position: absolute;
-    top: 42.5%;
-    z-index: 999;
-    border-radius: 10px;
-    animation: test 2s infinite alternate;
+@media (max-width: 1024px) {
+    .section {
+        padding: 10px var(--padding-container);
+
+        &-box-describe {
+            width: 70%;
+        }
+    }
 }
 
-@keyframes test {
-    0% {
-        transform: translateY(-10px) skew(-37deg, 7deg);
-    }
+@media (max-width: 760px) {
+    .section {
+        flex-wrap: wrap;
+        padding-top: 60px;
 
-    100% {
-        transform: translateY(0px) skew(-37deg, 7deg);
+        &-box-describe {
+            width: 100%;
+        }
+    }
+}
+
+@media (max-width: 500px) {
+    .section {
+        padding-top: 10px;
+
+        button {
+            width: 100%;
+        }
     }
 }

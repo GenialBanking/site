@@ -12,12 +12,20 @@ body {
     --button-hover-color: #0015b3;
 
     --button-text-color: #fff;
-    
-    --shadow: 0px 1px 26px -16px rgba(54,54,54,1);
+
+    --font-title-size: 40px;
+    --font-sub-title-size: 26px;
+    --font-button-size: 14px;
+    --font-menu-size: 20px;
+    --font-text-size: 16px;
+
+    --padding-container: 40px;
+
+    --shadow: 0px 1px 26px -16px rgba(54, 54, 54, 1);
 }
 
 body.dark-mode {
-    --background-color: #1f1f1f;
+    --background-color: #121212;
     --background2-color: #3d3d3d;
     --background3-color: #b7babc;
     --background4-color: #e1e4e6;
@@ -25,4 +33,23 @@ body.dark-mode {
     --background2-hover-color: #323232;
 
     --shadow: 0px 1px 26px 2px rgb(0, 0, 0);
+}
+
+@media (max-width: 760px) {
+    body {
+        --padding-container: 40px;
+    }
+}
+
+@media (max-width: 440px) {
+    body {
+        --font-title-size: 36px;
+        --font-sub-title-size: 22px;
+    }
+}
+
+@media (max-width: 320px) {
+    body {
+        --padding-container: 20px;
+    }
 }

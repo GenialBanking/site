@@ -4,11 +4,11 @@
 
 @keyframes enter-side {
     0% {
-        transform: translateX(100%);
+        transform: translateX(100%) !important;
     }
 
     100% {
-        transform: translateX(0);
+        transform: translateX(0) !important;
     }
 }
 
