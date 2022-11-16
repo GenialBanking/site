@@ -1,72 +1,84 @@
-.section {
+section {
     min-height: calc(100vh - 70px);
     display: flex;
     padding: 20px var(--padding-container);
     align-items: center;
-    top: 70px;
-    background-image: url('../../../assets/images/background-banking.jpg');
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
+}
 
-    &-box-describe {
-        max-height: calc(100vh - 110px);
-        width: 50%;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: flex-start;
+.section {
+    &-home {
+        top: 70px;
+        background-image: url('../../../assets/images/background-banking.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
 
-        h1 {
-            font-size: var(--font-title-size);
-            color: var(--background4-color);
-            padding-bottom: 10px;
-            opacity: 0;
-            animation: enter-bottom 1s forwards;
-        }
+        &-box {
+            max-height: calc(100vh - 110px);
+            width: 50%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-start;
 
-        p {
-            font-size: var(--font-sub-title-size);
-            color: var(--background3-color);
-            padding-bottom: 50px;
-            opacity: 0;
-            animation: enter-bottom 1s forwards .5s;
-        }
-
-        button {
-            opacity: 0;
-            animation: enter-bottom 1s forwards 1s;
+            h1 {
+                font-size: var(--font-title-size);
+                color: var(--background4-color);
+                padding-bottom: 10px;
+                opacity: 0;
+                animation: enter-bottom 1s forwards;
+            }
+    
+            p {
+                font-size: var(--font-sub-title-size);
+                color: var(--background3-color);
+                padding-bottom: 50px;
+                opacity: 0;
+                animation: enter-bottom 1s forwards .5s;
+            }
+    
+            button {
+                opacity: 0;
+                animation: enter-bottom 1s forwards 1s;
+            }
         }
     }
 }
 
 @media (max-width: 1024px) {
     .section {
-        padding: 10px var(--padding-container);
+        &-home {
+            padding: 10px var(--padding-container);
 
-        &-box-describe {
-            width: 70%;
+            &-box {
+                width: 70%;
+
+            }
         }
     }
 }
 
 @media (max-width: 760px) {
     .section {
-        flex-wrap: wrap;
-        padding-top: 60px;
+        &-home {
+            flex-wrap: wrap;
+            padding-top: 60px;
 
-        &-box-describe {
-            width: 100%;
+            &-box {
+                width: 100%;
+            }
         }
     }
 }
 
 @media (max-width: 500px) {
     .section {
-        padding-top: 10px;
+        &-home {
+            padding-top: 10px;
 
-        button {
-            width: 100%;
+            button {
+                width: 100%;
+            }
         }
     }
 }
